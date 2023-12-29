@@ -26,7 +26,8 @@ Resources:
       MasterUsername: "root"
       ManageMasterUserPassword: true
       MasterUserSecret:
-        KmsKeyId: !Ref DBKMSKey
+        KmsKeyId: !ImportValue 
+          Fn::Sub: "${App}-ArtifactKey"
 
   DBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
