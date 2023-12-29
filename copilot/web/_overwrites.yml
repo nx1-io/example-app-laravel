@@ -8,3 +8,14 @@ image:
       NIXPACKS_METADATA: php
       NIXPACKS_PHP_ROOT_DIR: /app/public
       PORT: 8080
+
+variables:
+  DB_HOST:
+    from_cfn: "${COPILOT_APPLICATION_NAME}-${COPILOT_ENVIRONMENT_NAME}-DB-Address"
+  DB_PORT:
+    from_cfn: "${COPILOT_APPLICATION_NAME}-${COPILOT_ENVIRONMENT_NAME}-DB-Port"
+secrets:
+  DB_USER:
+    from_cfn: "${COPILOT_APPLICATION_NAME}-${COPILOT_ENVIRONMENT_NAME}-DB-Secret-Username"
+  DB_PASSWORD:
+    from_cfn: "${COPILOT_APPLICATION_NAME}-${COPILOT_ENVIRONMENT_NAME}-DB-Secret-Password"
