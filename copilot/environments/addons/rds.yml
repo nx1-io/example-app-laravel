@@ -23,7 +23,6 @@ Resources:
         - !Ref DBSecurityGroup
       StorageEncrypted: true
       KmsKeyId: !Ref DBKMSKey
-      MasterUsername: "root"
       ManageMasterUserPassword: true
       MasterUserSecret:
         KmsKeyId: !Ref DBKMSKey
