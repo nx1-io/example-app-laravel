@@ -13,7 +13,7 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       DBInstanceIdentifier: !Sub "${App}-${Env}-DB"
-      DBName: "default"
+      DBName: "laravel"
       DBInstanceClass: "db.t3.micro"
       AllocatedStorage: "20"
       Engine: "MySQL"
