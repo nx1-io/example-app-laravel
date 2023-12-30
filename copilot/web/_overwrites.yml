@@ -3,11 +3,6 @@ image:
   build:
     dockerfile: .nixpacks/Dockerfile
     context: .
-    args:
-      IS_LARAVEL: yes
-      NIXPACKS_METADATA: php
-      NIXPACKS_PHP_ROOT_DIR: /app/public
-      PORT: 8080
 
 variables:
   DB_HOST:
