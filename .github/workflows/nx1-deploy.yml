@@ -24,14 +24,10 @@ jobs:
           api_token: uat6a5WQtcbgPxMC9b8t7ltRzllk81Sm63VIepTa6aa73cd2
           env_id: 4c902cae-c43f-4be0-83b6-0df7173f8184
 
-      - name: Run nixpacks
-        run: |
-          export VERSION=1.20.0
-          curl -LO https://github.com/railwayapp/nixpacks/releases/download/v${VERSION}/nixpacks-v${VERSION}-amd64.deb
-          sudo dpkg -i nixpacks-v${VERSION}-amd64.deb
-          nixpacks build . -o .
-          eval $(nixpacks plan  . | jq -r '.variables | to_entries | .[] | "export " + .key + "=" + .value')
-          envsubst < .nixpacks/Dockerfile > .nixpacks/Dockerfile.envsubst && mv .nixpacks/Dockerfile.envsubst .nixpacks/Dockerfile
+      - name: NX1 Build with Nixpacks
+        uses: citadel-runcloud/dev-composite-action@main
+        with:
+          command: 'build-nixpacks'
 
       - name: NX1 Assume Role
         uses: citadel-runcloud/dev-composite-action@main
