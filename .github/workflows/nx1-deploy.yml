@@ -30,7 +30,8 @@ jobs:
           curl -LO https://github.com/railwayapp/nixpacks/releases/download/v${VERSION}/nixpacks-v${VERSION}-amd64.deb
           sudo dpkg -i nixpacks-v${VERSION}-amd64.deb
           nixpacks build . -o .
-          nixpacks plan . | jq -r '.variables | to_entries | .[] | .key + "=" + .value' >> $GITHUB_ENV
+          eval $(nixpacks plan  . | jq -r '.variables | to_entries | .[] | "export " + .key + "=" + .value')
+          envsubst < .nixpacks/Dockerfile > .nixpacks/Dockerfile.envsubst && mv .nixpacks/Dockerfile.envsubst .nixpacks/Dockerfile
 
       - name: NX1 Assume Role
         uses: citadel-runcloud/dev-composite-action@main
