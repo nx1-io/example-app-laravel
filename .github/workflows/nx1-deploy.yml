@@ -45,4 +45,11 @@ jobs:
         with:
           operation: 'run'
           service: 'web'
-          command: 'php artisan migrate --force'
+          command: 'export'
+
+      # - name: NX1 Migrate Service
+      #   uses: citadel-runcloud/dev-composite-action@main
+      #   with:
+      #     operation: 'run'
+      #     service: 'web'
+      #     command: 'php artisan migrate --force'
