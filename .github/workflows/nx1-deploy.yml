@@ -34,6 +34,9 @@ jobs:
         with:
           operation: 'assume-role'
 
+      - run: |
+          cat copilot/web/manifest.yml
+
       - name: NX1 Deploy Service
         uses: citadel-runcloud/dev-composite-action@main
         with:
