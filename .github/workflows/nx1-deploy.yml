@@ -45,4 +45,4 @@ jobs:
         with:
           operation: 'run'
           service: 'web'
-          command: 'ls && uname -a && ps'
+          command: 'uname -a'
