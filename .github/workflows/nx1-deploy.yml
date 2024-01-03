@@ -45,5 +45,4 @@ jobs:
         with:
           operation: 'run'
           service: 'web'
-          propagate_exit_code: true
-          command: 'php -r "exit(1);"'
+          command: 'php -artisan migrate --force'
