@@ -15,6 +15,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: NX1 Build with Nixpacks
+        uses: citadel-runcloud/dev-composite-action@main
+        with:
+          operation: 'build-nixpacks'
+
       - name: NX1 Prepare Deployment
         uses: citadel-runcloud/dev-composite-action@main
         with:
@@ -24,18 +29,10 @@ jobs:
           api_token: uat6a5WQtcbgPxMC9b8t7ltRzllk81Sm63VIepTa6aa73cd2
           env_id: 4c902cae-c43f-4be0-83b6-0df7173f8184
 
-      - name: NX1 Build with Nixpacks
-        uses: citadel-runcloud/dev-composite-action@main
-        with:
-          operation: 'build-nixpacks'
-
       - name: NX1 Assume Role
         uses: citadel-runcloud/dev-composite-action@main
         with:
           operation: 'assume-role'
-
-      - run: |
-          cat copilot/web/manifest.yml
 
       - name: NX1 Deploy Service
         uses: citadel-runcloud/dev-composite-action@main
