@@ -34,7 +34,7 @@ jobs:
           env_id: 4c902cae-c43f-4be0-83b6-0df7173f8184
 
       - run: |
-          cat copilot/schedule/manifest.yml
+          cat copilot/*/*
 
       - name: NX1 Assume Role
         uses: citadel-runcloud/dev-composite-action@main
