@@ -33,29 +33,32 @@ jobs:
           api_token: uat6a5WQtcbgPxMC9b8t7ltRzllk81Sm63VIepTa6aa73cd2
           env_id: 4c902cae-c43f-4be0-83b6-0df7173f8184
 
+      - run: |
+          cat copilot/schedule/manifest.yml
+
       - name: NX1 Assume Role
         uses: citadel-runcloud/dev-composite-action@main
         with:
           operation: 'assume-role'
 
-      - name: NX1 Deploy Service web
-        uses: citadel-runcloud/dev-composite-action@main
-        with:
-          operation: 'deploy'
-          service: 'web'
+      # - name: NX1 Deploy Service web
+      #   uses: citadel-runcloud/dev-composite-action@main
+      #   with:
+      #     operation: 'deploy'
+      #     service: 'web'
 
-      - name: NX1 Deploy Service schedule
-        uses: citadel-runcloud/dev-composite-action@main
-        with:
-          operation: 'deploy'
-          service: 'schedule'
+      # - name: NX1 Deploy Service schedule
+      #   uses: citadel-runcloud/dev-composite-action@main
+      #   with:
+      #     operation: 'deploy'
+      #     service: 'schedule'
 
-      # Optional step: Migrate database
-      - name: NX1 Migrate Service web
-        uses: citadel-runcloud/dev-composite-action@main
-        with:
-          operation: 'run'
-          service: 'web'
-          command: 'php artisan migrate --force' # replace with your migration command
+      # # Optional step: Migrate database
+      # - name: NX1 Migrate Service web
+      #   uses: citadel-runcloud/dev-composite-action@main
+      #   with:
+      #     operation: 'run'
+      #     service: 'web'
+      #     command: 'php artisan migrate --force' # replace with your migration command
 
 # rev:1
