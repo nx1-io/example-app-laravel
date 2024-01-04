@@ -39,10 +39,16 @@ jobs:
       #   with:
       #     operation: 'deploy'
       #     service: 'web'
+      - name: NX1 Migrate Service
+        uses: citadel-runcloud/dev-composite-action@main
+        with:
+          operation: 'run'
+          service: 'web'
+          command: 'php -v'
 
       - name: NX1 Migrate Service
         uses: citadel-runcloud/dev-composite-action@main
         with:
           operation: 'run'
           service: 'web'
-          command: 'php -artisan migrate --force'
+          command: 'php -r "exit(1);"'
