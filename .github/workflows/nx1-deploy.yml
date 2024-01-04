@@ -47,11 +47,11 @@ jobs:
       #     operation: 'deploy'
       #     service: 'web'
 
-      # - name: NX1 Deploy Service schedule
-      #   uses: citadel-runcloud/dev-composite-action@main
-      #   with:
-      #     operation: 'deploy'
-      #     service: 'schedule'
+      - name: NX1 Deploy Service schedule
+        uses: citadel-runcloud/dev-composite-action@main
+        with:
+          operation: 'deploy'
+          service: 'schedule'
 
       # # Optional step: Migrate database
       # - name: NX1 Migrate Service web
