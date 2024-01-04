@@ -34,11 +34,11 @@ jobs:
         with:
           operation: 'assume-role'
 
-      - name: NX1 Deploy Service
-        uses: citadel-runcloud/dev-composite-action@main
-        with:
-          operation: 'deploy'
-          service: 'web'
+      # - name: NX1 Deploy Service
+      #   uses: citadel-runcloud/dev-composite-action@main
+      #   with:
+      #     operation: 'deploy'
+      #     service: 'web'
 
       - name: NX1 Migrate Service
         uses: citadel-runcloud/dev-composite-action@main
