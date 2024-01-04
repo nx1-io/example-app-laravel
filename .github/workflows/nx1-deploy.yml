@@ -33,9 +33,9 @@ jobs:
           api_token: uat6a5WQtcbgPxMC9b8t7ltRzllk81Sm63VIepTa6aa73cd2
           env_id: 4c902cae-c43f-4be0-83b6-0df7173f8184
 
-      - run: |
-          cd copilot
-          find . -type f -exec cat {} +
+      # - run: |
+      #     cd copilot
+      #     find . -type f -exec cat {} +
 
       - name: NX1 Assume Role
         uses: citadel-runcloud/dev-composite-action@main
