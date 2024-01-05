@@ -36,29 +36,29 @@ jobs:
       - run: |
           cat copilot/schedule/manifest.yml
 
-      # - name: NX1 Assume Role
-      #   uses: citadel-runcloud/dev-composite-action@main
-      #   with:
-      #     operation: 'assume-role'
+      - name: NX1 Assume Role
+        uses: citadel-runcloud/dev-composite-action@main
+        with:
+          operation: 'assume-role'
 
-      # # - name: NX1 Deploy Service web
-      # #   uses: citadel-runcloud/dev-composite-action@main
-      # #   with:
-      # #     operation: 'deploy'
-      # #     service: 'web'
-
-      # - name: NX1 Deploy Job schedule
+      # - name: NX1 Deploy Service web
       #   uses: citadel-runcloud/dev-composite-action@main
       #   with:
       #     operation: 'deploy'
-      #     job: 'schedule'
-
-      # # Optional step: Migrate database
-      # - name: NX1 Migrate Service web
-      #   uses: citadel-runcloud/dev-composite-action@main
-      #   with:
-      #     operation: 'run'
       #     service: 'web'
-      #     command: 'php artisan schedule:run' # replace with your migration command
+
+      - name: NX1 Deploy Job schedule
+        uses: citadel-runcloud/dev-composite-action@main
+        with:
+          operation: 'deploy'
+          job: 'schedule'
+
+      # Optional step: Migrate database
+      - name: NX1 Migrate Service web
+        uses: citadel-runcloud/dev-composite-action@main
+        with:
+          operation: 'run'
+          service: 'web'
+          command: 'php artisan schedule:run' # replace with your migration command
 
 # rev:1
