@@ -25,7 +25,7 @@ jobs:
           operation: 'build-nixpacks'
 
       - name: NX1 Prepare Deployment
-        uses: nx1-io/dev-app-copilot-action@feature/app-addons
+        uses: nx1-io/app-copilot-action@feature/app-addons
         with:
           operation: 'prepare'
           app_id: 9ae416d2-9b5c-44cf-a901-8306eea8adb5
