@@ -74,7 +74,9 @@ Purpose: Deploys the ExpressJS application to the specified environment.
 **Security**: The workflow uses a secret (NX1_API_TOKEN) for the API token, ensuring security and confidentiality.
 
 **Customization**: To adapt this workflow for different applications or environments, modify the api_token.
----
+
+
+<hr/>
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
