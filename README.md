@@ -1,4 +1,4 @@
-<p align="center"><a href="https://nx1.io" target="_blank"><img src="https://assets-global.website-files.com/64c733db66ebf722f72bea5f/659b56a81b3593da28afb1f0_nx1-logo.svg" width="400" alt="NX1.io"></a></p>
+<p align="center"><a href="https://nx1.io" target="_blank"><img src="https://assets-global.website-files.com/64c733db66ebf722f72bea5f/659b56a81b3593da28afb1f0_nx1-logo.svg" width="300" alt="NX1.io"></a></p>
 
 
 # Documentation for NX1 Deploy - App GitHub Workflow
