@@ -1,7 +1,7 @@
 ---
 
-name: NX1 Deploy to greentea-dev1-us-west-2
-run-name: Deploy to greentea-dev1-us-west-2 (us-west-2/481313360369) by @${{ github.actor }}
+name: NX1 Deploy to self-contained-ohio-dev1
+run-name: Deploy to self-contained-ohio-dev1 (us-east-2/481313360369) by @${{ github.actor }}
 
 on:
   workflow_dispatch:
@@ -25,13 +25,13 @@ jobs:
           operation: 'build-nixpacks'
 
       - name: NX1 Prepare Deployment
-        uses: nx1-io/app-copilot-action@feature/app-addons
+        uses: nx1-io/app-copilot-action@main
         with:
           operation: 'prepare'
-          app_id: 9ae416d2-9b5c-44cf-a901-8306eea8adb5
           api_url: 'https://dev-app.citadel.run/api'
+          app_id: 9acfc1ad-79cb-4338-b6f8-91411082b51c
           api_token: ${{ secrets.NX1_API_TOKEN }}
-          env_id: 381c52c0-4306-472b-9131-fd562d5f0ac1
+          env_id: 4c902cae-c43f-4be0-83b6-0df7173f8184
 
       - name: NX1 Assume Role
         uses: nx1-io/app-copilot-action@main
