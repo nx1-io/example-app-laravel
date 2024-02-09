@@ -25,7 +25,7 @@ jobs:
           operation: 'build-nixpacks'
 
       - name: NX1 Prepare Deployment
-        uses: nx1-io/app-copilot-action@feature/app-addons
+        uses: nx1-io/app-copilot-action@main
         with:
           operation: 'prepare'
           api_url: 'https://dev-app.citadel.run/api'
@@ -39,7 +39,7 @@ jobs:
           operation: 'assume-role'
 
       - name: NX1 Deploy Service - web
-        uses: nx1-io/app-copilot-action@feature/app-addons
+        uses: nx1-io/app-copilot-action@main
         with:
           operation: 'deploy'
           service: 'web'
