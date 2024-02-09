@@ -39,7 +39,7 @@ jobs:
           operation: 'assume-role'
 
       - name: NX1 Deploy Service - web
-        uses: nx1-io/app-copilot-action@main
+        uses: nx1-io/app-copilot-action@feature/app-addons
         with:
           operation: 'deploy'
           service: 'web'
