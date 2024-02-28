@@ -38,6 +38,6 @@ Resources:
 Outputs:
   WebACLArn:
     Description: The ARN of the WebACL.
-    Value: !Ref WebACL
+    Value: !GetAtt WebACL.Arn
     Export:
       Name: !Sub '${App}-${Env}-WebACLArn'
