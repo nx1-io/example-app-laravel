@@ -32,7 +32,6 @@ jobs:
           app_id: 9acfc1ad-79cb-4338-b6f8-91411082b51c
           api_token: ${{ secrets.NX1_API_TOKEN }}
           env_id: 4c902cae-c43f-4be0-83b6-0df7173f8184
-          version: dev/v1
 
       - name: NX1 Assume Role
         uses: nx1-io/app-copilot-action@main
